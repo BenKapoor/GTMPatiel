@@ -18,12 +18,7 @@ public class Cours implements Serializable {
 	private String libelle;
 	private int nbHeure;
 	@ManyToMany(mappedBy = "cours")
-	private List<Personne> personnes = new ArrayList();
-	@Override
-	public String toString() {
-		return "Cours [idCours=" + idCours + ", libelle=" + libelle + ", nbHeure=" + nbHeure + ", personnes="
-				+ personnes + "]";
-	}
+	private List<Etudiant> etudiants = new ArrayList();
 	public int getIdCours() {
 		return idCours;
 	}
@@ -42,21 +37,22 @@ public class Cours implements Serializable {
 	public void setNbHeure(int nbHeure) {
 		this.nbHeure = nbHeure;
 	}
-	public List<Personne> getPersonnes() {
-		return personnes;
+	public List<Etudiant> getEtudiants() {
+		return etudiants;
 	}
-	public void setPersonnes(List<Personne> personnes) {
-		this.personnes = personnes;
+	public void setEtudiants(List<Etudiant> etudiants) {
+		this.etudiants = etudiants;
 	}
-	public Cours(int idCours, String libelle, int nbHeure, List<Personne> personnes) {
+	public Cours() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Cours(int idCours, String libelle, int nbHeure, List<Etudiant> etudiants) {
 		super();
 		this.idCours = idCours;
 		this.libelle = libelle;
 		this.nbHeure = nbHeure;
-		this.personnes = personnes;
-	}
-	public Cours() {
-		super();
+		this.etudiants = etudiants;
 	}
 	
 }

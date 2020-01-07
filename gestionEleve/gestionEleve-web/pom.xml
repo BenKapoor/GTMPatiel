@@ -12,8 +12,8 @@
   <groupId>eu.ensup</groupId>
   <artifactId>gestionEleve-web</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
   <packaging>war</packaging>
+  
   <name>gestionEleve-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
@@ -22,6 +22,10 @@
 		<jsp.version>2.3.3</jsp.version>
 		<api.version>4.0.1</api.version>
 		<jstl.version>1.2</jstl.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+   		<maven.compiler.target>1.7</maven.compiler.target>
+   		<servlet.version>4.0.1</servlet.version>
+    	<servlet.api.version>2.3.3</servlet.api.version>
 	</properties>
 	
   <dependencies>
@@ -55,5 +59,38 @@
   </dependencies>
   <build>
     <finalName>gestionEleve-web</finalName>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
