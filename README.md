@@ -1,4 +1,2 @@
 # GTMPatiel
-Créer une de donnée gestioneleve dans mysql
-
-Installation : Dans le installationBenjamin.bat ajouter le chemin tomcat/startup.bat
+https://github.com/BenKapoor/partielV2 => nouvelle version
